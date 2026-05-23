@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORMA — Revue d'Architecture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Bebas+Neue&family=Karla:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ══ CUSTOM CURSOR — dot + animated ring that replaces the native cursor ══ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ══ STICKY HEADER — logo, navigation links, accessibility shortcut, and mobile hamburger ══ -->
+  <header class="header" id="header">
+    <div class="header-left">
+      <span class="issue-tag">Mai 2026</span>
+    </div>
+    <div class="header-logo"><a href="#hero">FORMA</a></div>
+    <nav class="header-nav">
+      <a href="#featured" data-section="featured">Articles<span class="nav-progress" id="np-featured"></span></a>
+      <a href="#gallery" data-section="gallery">Galerie<span class="nav-progress" id="np-gallery"></span></a>
+      <a href="#interviews" data-section="interviews">Interviews<span class="nav-progress"
+          id="np-interviews"></span></a>
+      <a href="#opinion" data-section="opinion">Opinions<span class="nav-progress" id="np-opinion"></span></a>
+      <a href="#access-section" class="nav-access-btn">
+        <span class="access-dot"></span>Accessibilité
+      </a>
+    </nav>
+    <button class="hamburger" id="hamburger"><span></span><span></span></button>
+  </header>
+
+  <!-- ══ HERO SECTION — full-bleed cover story with title, subtitle, and author info ══ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="https://picsum.photos/seed/arch_cover/1600/900" alt="Cover">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-meta">
+        <span class="tag-pill">COVER STORY</span>
+        <span class="tag-pill">BRUTALISM</span>
+      </div>
+      <h1 class="hero-title">Le béton<br><em>qui respire</em></h1>
+      <p class="hero-subtitle">Une exploration de l'architecture brutaliste contemporaine — comment le matériau le plus brut devient le langage visuel le plus expressif de notre siècle.</p>
+      <div class="hero-author">
+        <img src="https://picsum.photos/seed/author1/80/80" alt="Auteur" class="author-avatar">
+        <div><strong>Maria Popa</strong><span>Rédactrice en chef I</span></div>
+        <div><strong>Alexandra Munteanu</strong><span>Rédactrice en chef II</span></div>
+      </div>
+      <a href="#featured" class="hero-cta">Lire l'article →</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══ NEWS TICKER — scrolling marquee strip with headline teaser items ══ -->
+  <div class="ticker-wrap">
+    <div class="ticker-inner">
+      <div class="ticker-track">
+        <span>Biennale de Venise 2026 — Rapport complet</span>
+        <span>★</span>
+        <span>Zaha Hadid Architects — Projet exclusif à Tokyo</span>
+        <span>★</span>
+        <span>Interview : Kengo Kuma sur la nature et le béton</span>
+        <span>★</span>
+        <span>Top 10 bâtiments de la décennie</span>
+        <span>★</span>
+        <span>Tendances 2026 : L'architecture biophilique</span>
+        <span>★</span>
+        <span>Biennale de Venise 2026 — Rapport complet</span>
+        <span>★</span>
+        <span>Zaha Hadid Architects — Projet exclusif à Tokyo</span>
+        <span>★</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ FEATURED ARTICLES — main editorial grid with large card, small cards, pull-quote, and horizontal cards ══ -->
+  <section class="featured reveal-section" id="featured">
+    <div class="section-label"><span>ARTICLES</span>
+      <div class="label-line"></div>
+    </div>
+
+    <div class="featured-grid">
+      <article class="art-card art-card--lg reveal-item">
+        <div class="art-card-img">
+          <img src="https://picsum.photos/seed/arch1/800/600" alt="">
+          <div class="art-card-img-overlay"></div>
+        </div>
+        <div class="art-card-body">
+          <div class="art-card-meta">
+            <span class="tag-pill tag-pill--dark">ANALYSE</span>
+            <span class="art-date">3 mai 2026</span>
+          </div>
+          <h2>La structure comme récit : quand le bâtiment raconte une histoire</h2>
+          <p>Comment les architectes contemporains utilisent la structure portante comme élément d'expression artistique, transformant la nécessité ingénieure en langage visuel pur.</p>
+          <div class="art-card-footer">
+            <img src="https://picsum.photos/seed/a2/40/40" class="author-avatar author-avatar--sm" alt="">
+            <span>Mihai Ionescu</span>
+            <span class="read-time">8 min de lecture</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="art-col">
+        <article class="art-card art-card--sm reveal-item">
+          <div class="art-card-img art-card-img--sm">
+            <img src="https://picsum.photos/seed/arch2/400/300" alt="">
+          </div>
+          <div class="art-card-body">
+            <span class="tag-pill tag-pill--dark">TENDANCES</span>
+            <h3>Le biomimétisme dans l'architecture urbaine</h3>
+            <p>Les bâtiments qui imitent la nature ne sont pas seulement esthétiques — ils sont aussi fonctionnels.</p>
+          </div>
+        </article>
+        <div class="pull-quote">
+          <blockquote>« L'architecture est de la musique pétrifiée. »</blockquote>
+          <cite>— Goethe</cite>
+        </div>
+        <article class="art-card art-card--sm reveal-item">
+          <div class="art-card-img art-card-img--sm">
+            <img src="https://picsum.photos/seed/arch3/400/300" alt="">
+          </div>
+          <div class="art-card-body">
+            <span class="tag-pill tag-pill--dark">REPORTAGE</span>
+            <h3>Solitaires et grandioses : les tours de Koolhaas</h3>
+            <p>Une visite exclusive des projets inachevés de Rem Koolhaas.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="art-row">
+      <article class="art-card art-card--horiz reveal-item">
+        <div class="art-card-img art-card-img--horiz">
+          <img src="https://picsum.photos/seed/arch4/500/350" alt="">
+        </div>
+        <div class="art-card-body">
+          <span class="tag-pill tag-pill--dark">ESSAI</span>
+          <h3>Le vide comme élément de design : l'architecture négative</h3>
+          <p>Dans l'architecture japonaise traditionnelle, ce qui manque est tout aussi important que ce qui existe.
+            Le concept <em>ma</em> redéfinit la façon dont nous percevons l'espace.</p>
+          <span class="read-time">6 min de lecture</span>
+        </div>
+      </article>
+      <article class="art-card art-card--horiz reveal-item">
+        <div class="art-card-img art-card-img--horiz">
+          <img src="https://picsum.photos/seed/arch5/500/350" alt="">
+        </div>
+        <div class="art-card-body">
+          <span class="tag-pill tag-pill--dark">INTERVIEW</span>
+          <h3>Snøhetta : « Les bâtiments doivent être humbles »</h3>
+          <p>L'agence norvégienne qui a redéfini le concept de bibliothèque publique parle de la relation entre
+            architecture et communauté.</p>
+          <span class="read-time">10 min de lecture</span>
+        </div>
+      </article>
+      <article class="art-card art-card--vert">
+        <div class="art-card-img art-card-img--vert">
+          <img src="https://picsum.photos/seed/arch6/400/500" alt="">
+        </div>
+        <div class="art-card-body">
+          <span class="tag-pill tag-pill--dark">PHOTO</span>
+          <h3>Lignes et ombres : la photographie architecturale</h3>
+          <span class="read-time">4 min de lecture</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ══ PHOTO GALLERY — curated masonry grid of architectural photography ══ -->
+  <section class="gallery-section reveal-section" id="gallery">
+    <div class="section-label"><span>GALERIE</span>
+      <div class="label-line"></div>
+    </div>
+    <h2 class="gallery-title">Forme <em>&</em> Lumière</h2>
+    <p class="gallery-sub">Une sélection curatoriale des archives photographiques FORMA 2026</p>
+    <div class="gallery-masonry">
+      <div class="gal-item gal-item--tall">
+        <img src="https://picsum.photos/seed/gal1/600/900" alt="">
+        <div class="gal-hover"><span>Brooklyn Bridge</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="https://picsum.photos/seed/gal2/600/450" alt="">
+        <div class="gal-hover"><span>Gare</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="https://picsum.photos/seed/gal3/600/450" alt="">
+        <div class="gal-hover"><span>Montagnes brumeuses</span></div>
+      </div>
+      <div class="gal-item gal-item--wide">
+        <img src="https://picsum.photos/seed/gal4/1200/500" alt="">
+        <div class="gal-hover"><span>Horizon urbain</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="https://picsum.photos/seed/gal5/600/450" alt="">
+        <div class="gal-hover"><span>Framboises</span></div>
+      </div>
+      
+
+      <div class="gal-item">
+    <img src="https://picsum.photos/seed/gal6/600/900" alt="">
+    <div class="gal-hover"><span>Tulipe</span></div>
+</div>
+
+<div class="gal-item">
+    <img src="https://picsum.photos/seed/picsum/600/900" alt="Description">
+    <div class="gal-hover"><span>Montagne enneigée</span></div>
+</div>
+    </div>
+  </section>
+
+  <!-- ══ INTERVIEWS — grid of featured architect interviews ══ -->
+  <section class="interviews reveal-section" id="interviews">
+    <div class="section-label"><span>INTERVIEWS</span>
+      <div class="label-line"></div>
+    </div>
+    <div class="interviews-grid">
+      <div class="interview-card reveal-item">
+        <div class="interview-img">
+          <img src="https://picsum.photos/seed/int1/400/400" alt="Kengo Kuma">
+          <div class="interview-num">01</div>
+        </div>
+        <div class="interview-body">
+          <h3>Kengo Kuma</h3>
+          <span class="interview-role">Tokyo, Japon</span>
+          <p>« Je veux que mes bâtiments disparaissent dans la nature environnante. L'architecture la plus puissante est celle qu'on oublie. »</p>
+          <a href="#" class="link-arrow">Lire l'interview →</a>
+        </div>
+      </div>
+      <div class="interview-card reveal-item">
+        <div class="interview-img">
+          <img src="https://picsum.photos/seed/int2/400/400" alt="Bjarke Ingels">
+          <div class="interview-num">02</div>
+        </div>
+        <div class="interview-body">
+          <h3>Bjarke Ingels</h3>
+          <span class="interview-role">Copenhague, Danemark</span>
+          <p>« L'architecture doit être hédoniste et durable — agréable et responsable à la fois. »</p>
+          <a href="#" class="link-arrow">Lire l'interview →</a>
+        </div>
+      </div>
+      <div class="interview-card reveal-item">
+        <div class="interview-img">
+          <img src="https://picsum.photos/seed/int3/400/400" alt="Francis Kere">
+          <div class="interview-num">03</div>
+        </div>
+        <div class="interview-body">
+          <h3>Diébédo Francis Kéré</h3>
+          <span class="interview-role">Burkina Faso / Berlin</span>
+          <p>« La meilleure architecture naît des contraintes — le manque de ressources vous oblige à être créatif. »</p>
+          <a href="#" class="link-arrow">Lire l'interview →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ OPINION — sidebar + long-form opinion article with statistics ══ -->
+  <section class="opinion reveal-section" id="opinion">
+    <div class="opinion-layout">
+      <div class="opinion-sidebar">
+        <div class="section-label"><span>OPINION</span>
+          <div class="label-line"></div>
+        </div>
+        <div class="sticky-widget">
+          <h4>Dans ce numéro</h4>
+          <ul>
+            <li><a href="#featured">Le brutalisme contemporain</a></li>
+            <li><a href="#gallery">Galerie : Forme &amp; Lumière</a></li>
+            <li><a href="#interviews">Interviews exclusives</a></li>
+            <li><a href="#access-section">Modes d'accessibilité</a></li>
+          </ul>
+        </div>
+        <div class="sticky-widget">
+          <h4>Tags</h4>
+          <div class="tag-cloud">
+            <span class="tag">Brutalisme</span>
+            <span class="tag">Modernisme</span>
+            <span class="tag">Durabilité</span>
+            <span class="tag">Urbanisme</span>
+            <span class="tag">Japon</span>
+            <span class="tag">Béton</span>
+            <span class="tag">Paramétrique</span>
+          </div>
+        </div>
+      </div>
+
+      <article class="opinion-article">
+        <div class="art-meta-row">
+          <img src="https://picsum.photos/seed/op1/60/60" class="author-avatar" alt="">
+          <div><strong>Radu Comșa</strong><span>Critique d'architecture</span></div>
+          <span class="art-date">1 mai 2026 · 12 min</span>
+        </div>
+        <h2 class="opinion-title">Pourquoi la laide architecture nous nuit</h2>
+        <p class="opinion-lead">Il existe un consensus croissant parmi les neurosciences que l'environnement bâti affecte directement notre état psychologique. Les bâtiments ne sont pas neutres — ils nous façonnent.</p>
+        <img src="https://picsum.photos/seed/op2/900/400" class="opinion-hero-img" alt="">
+        <p>Des études menées par des universités britanniques et américaines montrent que les personnes vivant dans des quartiers à l'architecture de faible qualité rapportent des niveaux plus élevés d'anxiété, de dépression et de sentiment d'aliénation. Il ne s'agit pas d'esthétique superficielle — mais d'une réponse neurologique profonde à l'ordre visuel, aux proportions, au rythme et à la matérialité.</p>
+        <p>L'architecture classique, avec ses proportions mathématiques et ses ornements répétitifs, active les mêmes zones cérébrales que les paysages naturels. Notre cerveau, formé au fil de millénaires d'évolution dans la nature, reconnaît les motifs fractals et les associe à la sécurité et au confort.</p>
+        <blockquote class="opinion-quote">« Construire laid est un acte de violence lente contre l'habitant. »
+          <cite>— Colin Ellard, neuropsychologue</cite>
+        </blockquote>
+        <p>En revanche, les blocs de béton lisses, sans articulations, sans rythme, sans échelle humaine, produisent ce que les chercheurs appellent la « privation visuelle » — une forme subtile de stress chronique.</p>
+        <div class="opinion-stats">
+          <div class="stat-item"><span class="stat-num">40%</span>
+            <p>du stress urbain provient de l'environnement bâti</p>
+          </div>
+          <div class="stat-item"><span class="stat-num">2×</span>
+            <p>plus de dépression dans les quartiers monotones</p>
+          </div>
+          <div class="stat-item"><span class="stat-num">8s</span>
+            <p>c'est tout ce qu'il faut au cerveau pour évaluer un bâtiment</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ══ ACCESSIBILITY SECTION — mode cards, real-time status bar, behavioral radar, and session log ══ -->
+  <section class="access-section" id="access-section">
+    <div class="access-section-inner">
+
+      <div class="access-intro">
+        <div class="section-label"><span>ACCESSIBILITÉ</span>
+          <div class="label-line"></div>
+        </div>
+        <h2 class="access-main-title">Lisez dans <em>votre mode</em></h2>
+        <p class="access-desc">FORMA s'adapte automatiquement à votre façon de lire — en détectant la vitesse de défilement, le nombre d'interactions et le temps passé sur la page. Vous pouvez aussi activer manuellement n'importe quel mode à tout moment.</p>
+        <div class="access-auto-badge">
+          <span class="pulse-dot"></span>
+          <span id="autoDetectLabel">Détection automatique <strong>active</strong></span>
+        </div>
+        <!-- Button that opens the A/B split-screen comparison overlay -->
+        <button class="ab-trigger-btn" onclick="openAB()">⬛ Comparaison A/B</button>
+      </div>
+
+      <!-- Accessibility mode cards — each card activates a mode via the global setMode() function -->
+      <div class="access-modes-grid">
+        <div class="access-mode-card" id="card-dyslexia" onclick="setMode('dyslexia')">
+          <div class="amc-number">01</div>
+          <div class="amc-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="8" y="12" width="32" height="4" rx="2" fill="currentColor" opacity="0.3" />
+              <rect x="8" y="22" width="24" height="4" rx="2" fill="currentColor" opacity="0.6" />
+              <rect x="8" y="32" width="28" height="4" rx="2" fill="currentColor" />
+            </svg>
+          </div>
+          <h3>Dyslexie</h3>
+          <p>Espacement élargi, police plus grande, lignes plus larges — lecture sans effort.</p>
+          <div class="amc-triggers"><span>🕐 Temps long sur la page</span><span>📖 Relecture fréquente</span></div>
+          <div class="amc-active-bar"></div>
+        </div>
+
+        <div class="access-mode-card" id="card-low-vision" onclick="setMode('low-vision')">
+          <div class="amc-number">02</div>
+          <div class="amc-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="3" />
+              <circle cx="24" cy="24" r="4" fill="currentColor" />
+              <path d="M4 24 C8 14 16 8 24 8 C32 8 40 14 44 24 C40 34 32 40 24 40 C16 40 8 34 4 24Z"
+                stroke="currentColor" stroke-width="2" fill="none" />
+            </svg>
+          </div>
+          <h3>Basse Vision</h3>
+          <p>Contraste maximal, grand texte, éléments simplifiés — visibilité totale.</p>
+          <div class="amc-triggers"><span>📱 Petit écran</span><span>🔍 Zoom fréquent</span></div>
+          <div class="amc-active-bar"></div>
+        </div>
+
+        <div class="access-mode-card" id="card-focus" onclick="setMode('focus')">
+          <div class="amc-number">03</div>
+          <div class="amc-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="3" fill="currentColor" />
+              <circle cx="24" cy="24" r="9" stroke="currentColor" stroke-width="2" />
+              <circle cx="24" cy="24" r="17" stroke="currentColor" stroke-width="1.5" opacity="0.5" />
+              <line x1="24" y1="4" x2="24" y2="10" stroke="currentColor" stroke-width="2" />
+              <line x1="24" y1="38" x2="24" y2="44" stroke="currentColor" stroke-width="2" />
+              <line x1="4" y1="24" x2="10" y2="24" stroke="currentColor" stroke-width="2" />
+              <line x1="38" y1="24" x2="44" y2="24" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </div>
+          <h3>Concentration</h3>
+          <p>Tout ce qui n'est pas essentiel disparaît — images décoratives, sidebars, éléments visuels.</p>
+          <div class="amc-triggers"><span>⚡ Défilement rapide</span><span>🖱 Clics multiples</span></div>
+          <div class="amc-active-bar"></div>
+        </div>
+
+        <div class="access-mode-card access-mode-card--reset" id="card-normal" onclick="setMode('normal')">
+          <div class="amc-number">↺</div>
+          <div class="amc-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M24 8 A16 16 0 1 1 8 24" stroke="currentColor" stroke-width="3" fill="none"
+                stroke-linecap="round" />
+              <polyline points="8,16 8,24 16,24" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>Normal</h3>
+          <p>Revenez à l'interface standard du magazine FORMA.</p>
+          <div class="amc-triggers"><span>✦ Expérience par défaut</span></div>
+          <div class="amc-active-bar"></div>
+        </div>
+      </div>
+
+      <!-- Real-time status bar — displays current mode, LED indicator, and behavior metric bars -->
+      <div class="access-status-bar">
+        <div class="status-current">
+          <div class="status-led" id="statusLed"></div>
+          <span>Mode actuel :</span>
+          <strong id="currentModeLabel">Normal</strong>
+        </div>
+        <div class="status-metrics">
+          <div class="metric">
+            <span class="metric-label">Défilement rapide</span>
+            <div class="metric-bar">
+              <div class="metric-fill" id="metricScroll"></div>
+            </div>
+            <span class="metric-val" id="valScroll">0</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Interactions</span>
+            <div class="metric-bar">
+              <div class="metric-fill" id="metricClicks"></div>
+            </div>
+            <span class="metric-val" id="valClicks">0</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Temps de lecture</span>
+            <div class="metric-bar">
+              <div class="metric-fill" id="metricTime"></div>
+            </div>
+            <span class="metric-val" id="valTime">0s</span>
+          </div>
+        </div>
+        <p class="status-message" id="statusMessage">L'interface s'adapte à votre comportement de lecture en temps réel.</p>
+      </div>
+
+      <!-- Analytics row — behavioral radar chart (left) and session event log (right) -->
+      <div class="analytics-row">
+
+        <div class="fingerprint-panel">
+          <div class="fp-header">
+            <span class="fp-title">PROFIL COMPORTEMENTAL</span>
+            <span class="fp-sub">Mis à jour en temps réel</span>
+          </div>
+          <div class="fp-radar-wrap">
+            <canvas id="radarCanvas" width="220" height="220"></canvas>
+            <div class="fp-radar-labels">
+              <span class="fp-lbl fp-lbl-scroll">Défilement</span>
+              <span class="fp-lbl fp-lbl-click">Clics</span>
+              <span class="fp-lbl fp-lbl-time">Temps</span>
+            </div>
+          </div>
+          <div class="fp-legend">
+            <span class="fp-leg-dot" id="fpLegDot"></span>
+            <span id="fpProfileName">Comportement neutre</span>
+          </div>
+        </div>
+
+        <div class="session-log-panel">
+          <div class="sl-header">
+            <span class="sl-title">JOURNAL DE SESSION</span>
+            <button class="sl-export-btn" id="slExportBtn">↓ Export CSV</button>
+          </div>
+          <div class="sl-entries" id="slEntries">
+            <div class="sl-entry sl-entry--init">
+              <span class="sl-time">0s</span>
+              <span class="sl-dot sl-dot--normal"></span>
+              <span class="sl-text">Session démarrée — mode <strong>Normal</strong></span>
+            </div>
+          </div>
+          <div class="sl-footer">
+            <span id="slTotal">1 événement</span>
+            <span class="sl-sep">·</span>
+            <span id="slDuration">0s de session</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ FOOTER — logo, section links, company links, and newsletter subscription form ══ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo">FORMA</div>
+      <div class="footer-tagline">Revue d'Architecture et de Design Urbain</div>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="#featured">Articles</a></li>
+          <li><a href="#gallery">Galerie</a></li>
+          <li><a href="#interviews">Interviews</a></li>
+          <li><a href="#opinion">Opinions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Compagnie</h4>
+        <ul>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Équipe</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Abonnement</h4>
+        <p>Recevez chaque numéro directement dans votre boîte mail.</p>
+        <div class="footer-subscribe">
+          <input type="email" placeholder="email@exemple.fr">
+          <button type="button">→</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FORMA. Tous droits réservés.</span>
+      <span>Fait avec ♦ pour les amateurs d'architecture</span>
+    </div>
+  </footer>
+
+ 
+  <!-- ══ A/B COMPARISON OVERLAY — split-screen iframe view comparing Normal vs a chosen accessibility mode ══ -->
+  <div id="abOverlay" class="ab-overlay" aria-hidden="true">
+    <div class="ab-header">
+      <span class="ab-label">COMPARAISON A / B</span>
+      <div class="ab-mode-picker">
+        <span>Mode B :</span>
+        <button class="ab-pick" data-mode="dyslexia" onclick="abPickMode('dyslexia')">Dyslexie</button>
+        <button class="ab-pick" data-mode="low-vision" onclick="abPickMode('low-vision')">Vision</button>
+        <button class="ab-pick ab-pick--active" data-mode="focus" onclick="abPickMode('focus')">Focus</button>
+      </div>
+      <button class="ab-close-btn" onclick="closeAB()">✕ Fermer</button>
+    </div>
+    <div class="ab-panes">
+      <div class="ab-pane" id="abPaneA">
+        <div class="ab-pane-label">A — Normal</div>
+        <iframe class="ab-iframe" id="abIframeA" src="about:blank" title="Normal"></iframe>
+      </div>
+      <div class="ab-pane" id="abPaneB">
+        <div class="ab-pane-label" id="abPaneBLabel">B — Focus</div>
+        <iframe class="ab-iframe" id="abIframeB" src="about:blank" title="Mode B"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ COGNITIVE LOAD GAUGE — fixed bottom-right SVG semicircle showing estimated reading effort (0–10) ══ -->
+  <div id="cogGauge" class="cog-gauge">
+    <svg viewBox="0 0 80 48" class="cg-svg">
+      <path d="M8 44 A32 32 0 0 1 72 44" fill="none" class="cg-track" stroke-width="6" stroke-linecap="round" />
+      <path d="M8 44 A32 32 0 0 1 72 44" fill="none" class="cg-arc" id="cgArc" stroke-width="6" stroke-linecap="round"
+        stroke-dasharray="100.5" stroke-dashoffset="100.5" />
+    </svg>
+    <div class="cg-value"><span id="cgScore">0</span><span class="cg-max">/10</span></div>
+    <div class="cg-label" id="cgLabel">Effort cognitif</div>
+  </div>
+  <div id="annotModal" class="annot-modal" aria-hidden="true">
+    <div class="annot-inner">
+      <div class="annot-hdr">
+        <span class="annot-hdr-label">NOTE AJOUTÉE</span>
+        <button class="annot-hdr-close" onclick="closeAnnotModal()">✕</button>
+      </div>
+      <div class="annot-preview" id="annotPreview"></div>
+      <textarea id="annotText" class="annot-textarea" placeholder="Écrivez une note ou une référence académique…" rows="4"></textarea>
+      <div class="annot-actions">
+        <button class="annot-save-btn" onclick="saveAnnotation()">Enregistrer la note</button>
+        <button class="annot-del-btn" id="annotDelBtn" onclick="deleteAnnotation()" style="display:none">Supprimer</button>
+      </div>
+    </div>
+  </div>
+  <div class="annot-backdrop" id="annotBackdrop" onclick="closeAnnotModal()"></div>
+
+  <button class="annot-toggle-btn" id="annotToggleBtn" onclick="toggleAnnotMode()" title="Activer le mode annotation">
+    ✎ Annotation
+  </button>
+
+  <!-- Main script — placed at end of body to ensure full DOM access on load -->
+  <script src="script.js"></script>
+</body>
+
+</html>

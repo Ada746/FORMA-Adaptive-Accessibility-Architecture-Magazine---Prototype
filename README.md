@@ -1,0 +1,2 @@
+# FORMA-Adaptive-Accessibility-Architecture-Magazine---Prototype
+FORMA is a website prototype that demonstrates AI-powered adaptive accessibility. Instead of requiring users to manually find and configure accessibility settings, the interface observes three behavioral signals, scroll speed, click frequency, and idle time and uses a machine learning classifier to suggest the most appropriate reading mode.

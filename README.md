@@ -2,8 +2,6 @@
 
 > An intelligent, behavior-driven web magazine that automatically adapts its interface to match the reader's cognitive and visual needs in real time.
 
-![FORMA Preview](https://picsum.photos/seed/arch_cover/1200/400)
-
 ---
 
 ## Table of Contents
